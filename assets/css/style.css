@@ -36,6 +36,7 @@ nav li {
     padding: 0 20px;
 }
 
+/* about me section */
 #about-me {
     background-color: tomato;
     display: flex;
@@ -48,6 +49,10 @@ nav li {
     border-right: 5px solid black;
 }
 
+br {
+    margin-bottom: 50px;
+}
+
 @media screen and (max-width: 500px) {
     nav {
         flex-direction: column;
@@ -55,5 +60,14 @@ nav li {
     }
     nav ul {
         flex-direction: column;
+    }
+    #about-me {
+        flex-direction: column;
+    }
+    #about-me aside {
+        text-align: left;
+        padding: 0;
+        border: 0 solid black;
+        border-bottom: 5px solid black;
     }
 }
