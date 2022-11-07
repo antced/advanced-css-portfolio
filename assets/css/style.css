@@ -202,32 +202,70 @@ figcaption {
 
 
 @media screen and (max-width: 768px) {
+    
+    nav,
+    nav ul,
+    #about-me,
+    #work,
+    .container,
+    #contact-me,
+    #contact-me ul {
+        flex-direction: column;
+    }
     nav {
-        flex-direction: column;
-        align-items: center;
+        justify-content: baseline;
+        padding: 0;
+        margin: 0;
     }
-    nav ul {
-        flex-direction: column;
+    nav h1 {
+        display: inline;
+        font-size: 200%;
     }
-    #about-me {
-        flex-direction: column;
+    nav li {
+        padding: 10px;
+    }
+    #hero h2 {
+        padding: 0;
+        top: 80%;
+        left: 15%;
     }
     #about-me aside {
+        font-size: 80%;
         text-align: left;
         padding-left: 20px;
-        border: 0 solid black;
-        border-bottom: 5px solid black;
+        border-bottom: 5px solid darkslategray;
     }
-    #about-me h1 {
+    #about-me h1,
+    #contact-me h1,
+    #work h1 {
         padding: 0;
     }
-    #work {
-        flex-direction: column;
+    .container {
+        margin: 0;
+        padding: 0;
+    }
+    .container figure {
+        flex: 1 0 100%;
+        margin-bottom: 20px;
+        padding: 50px;
+    }
+    figcaption {
+/* could not figure out how to reposition the figcaption in mobile mode */
     }
     #work aside {
         text-align: left;
         padding-left: 20px;
-        border: 0 solid black;
-        border-bottom: 5px solid black;
+        border-bottom: 5px solid darkslategray;
+    }
+    #contact-me aside {
+        text-align: left;
+        padding-left: 20px;
+        border-bottom: 5px solid darkslategray;
+    }
+    #contact-me ul {
+        align-items: baseline;
+    }
+    #contact-me li {
+        padding: 10px;
     }
 }
