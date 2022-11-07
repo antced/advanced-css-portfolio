@@ -4,40 +4,35 @@
     padding:0;
     font-family: Arial, Helvetica, sans-serif;
 }
-
+/* forcing the body height to be the entire size of window */
 body {
     height: 100vh;
     background-color: darkslategray;
+    color: darkslategray;
 }
 
+/* navigation bar */
 nav {
     background-color: darkslategray;
-    padding: 20px;
+    padding: 10px 70px 10px 0;
     display: flex;
     justify-content: space-between
 }
-
 nav h1 {
-    font-size: 200%;
-    color: darkslategray;
+    font-size: 300%;
     background-color: lightgreen;
     padding: 5px 10px 5px 50px;
-    margin-left: -20px;
 }
-
 nav ul {
     list-style: none;
     display: flex;
     align-items: center;
-    margin-right: 50px;
 }
-
 nav li {
     color: lightgreen;
     font-size: 120%;
     padding: 0 7px;
 }
-
 nav a {
     color: lightgreen;
     text-decoration: none;
@@ -45,6 +40,7 @@ nav a {
     padding: 0 10px 5px 10px;
 }
 
+/* hero image */
 #hero {
     width: 100%;
     height: 30%;
@@ -54,145 +50,146 @@ nav a {
     background-attachment: fixed;
     background-position: 20% 100%;
 }
+#hero h2 {
+    background-color: lightgreen;
+    color: darkslategray;
+    font-size: 200%;
+    padding: 10px;
+    display: inline;
+    position: relative;
+    top: 75%;
+    left: 75%;
+}
 
-/* about me section */
+/* about me container */
 #about-me {
     background-color: honeydew;
     display: flex;
 }
-
+/* left part of about me section */
+#about-me aside {
+    background-color: honeydew;
+    text-align: right;
+    border-right: 5px solid darkslategray;
+    margin-top: 50px;
+    flex: 1 0 20%;
+}
 #about-me h1 {
-    color: darkslategray;
     font-size: 300%;
     padding-right: 20px;
-    display: block;
+    /* forcing padding to push "about" above "me" because <br> didn't work on <h1> */
     padding-left: 100px;
 }
-
+/* right part of about me section */
+#about-me article {
+    flex: 1 0 75%;
+}
 #about-me p {
     line-height: 1.5;
     padding: 50px;
 }
 
-#about-me article {
-    /* flex: 1 0 75%; */
-}
-
-/* left part of about me section */
-#about-me aside {
-    background-color: honeydew;
-    text-align: right;
-    /* padding: 0 0 0 10%; */
-    border-right: 5px solid darkslategray;
-    flex: 1 0 20%;
-    margin-top: 50px;
-    /* margin-bottom: 50px; */
-}
-
-/* added margin below paragraph for better readability */
-#about-me br {
-    margin-bottom: 50px;
-}
-
+/* work container */
 #work {
     background-color: honeydew;
     display: flex;
-    padding-left: 10px;
+    /* padding-left: 10px; */
 }
-
+/* left part of work section */
+#work aside {
+    background-color: honeydew;
+    text-align: right;
+    border-right: 5px solid darkslategray;
+    margin-top: 50px;
+    flex: 1 0 21%;
+}
+#work h1 {
+    font-size: 300%;
+    padding-right: 20px;
+}
+/* right part of work section */
 .container {
-    width: 100%;
-    padding: 80px;
     display: flex;
+    width: 100%;
+    padding: 50px 80px 0 80px;
     flex-wrap: wrap;
-    /* justify-content: space-around; */
+    flex: 1 0 65%;
 }
-
+/* images for each project */
 #project-1 {
-    background-image: url(../images/350x150.png);
+    background-image: url(../images/rps.png);
     background-repeat: no-repeat;
     background-size: cover;
     flex: 1 0 90%;
     height: 350px;
-    margin: 10px 10px 5px 10px;
 }
-
 #project-2 {
-    background-image: url(../images/350x150.png);
+    background-image: url(../images/cat-creat.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 #project-3 {
-    background-image: url(../images/350x150.png);
+    background-image: url(../images/etch.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 #project-4 {
-    background-image: url(../images/350x150.png);
+    background-image: url(../images/turd-clicker.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 #project-5 {
-    background-image: url(../images/350x150.png);
+    background-image: url(../images/horiseon.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 .container figure {
-    flex: 1 0 35%;
+    flex: 1 0 30%;
     margin: 10px 10px 5px 10px;
     height: 150px;
-    background-color: blue;
+    background-color: lightgreen;
     border: 10px solid lightgreen;
 }
-
-#work h1 {
-    color: darkslategray;
-    font-size: 300%;
-    padding-right: 20px;
+figcaption {
+    background-color: lightgreen;
+    display: inline-block;
+    padding: 15px;
+    position: relative;
+    top: 40%;
+}
+#big-caption {
+    top: 74.5%;
 }
 
-#work aside {
-    text-align: right;
-    padding: 0 0 0 10%;
-    border-right: 5px solid darkslategray;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
+/* contact me section */
 #contact-me {
     background-color: honeydew;
     display: flex;
+    padding-bottom: 50px;
 }
-
-#contact-me h1 {
-    color: darkslategray;
-    font-size: 300%;
-    padding-right: 20px;
-}
-
+/* left part of contact me section */
 #contact-me aside {
     background-color: honeydew;
     text-align: right;
-    padding: 0 0 0 10%;
     border-right: 5px solid darkslategray;
     margin-top: 50px;
-    margin-bottom: 50px;
+    flex: 1 0 20%;
 }
-
+#contact-me h1 {
+    font-size: 300%;
+    padding-right: 20px;
+    padding-left: 100px;
+}
+/* right part of contact me section */
 #contact-me ul {
     list-style: none;
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    flex: 1 0 75%;
 }
-
 #contact-me li {
-    color: darkslategray;
     font-size: 120%;
-    padding: 0 7px;
 }
 
 #contact-me a {
@@ -217,7 +214,19 @@ nav a {
     }
     #about-me aside {
         text-align: left;
+        padding-left: 20px;
+        border: 0 solid black;
+        border-bottom: 5px solid black;
+    }
+    #about-me h1 {
         padding: 0;
+    }
+    #work {
+        flex-direction: column;
+    }
+    #work aside {
+        text-align: left;
+        padding-left: 20px;
         border: 0 solid black;
         border-bottom: 5px solid black;
     }
