@@ -4,6 +4,7 @@
     padding:0;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 /* forcing the body height to be the entire size of window */
 body {
     height: 100vh;
@@ -191,7 +192,6 @@ figcaption {
 #contact-me li {
     font-size: 120%;
 }
-
 #contact-me a {
     color: darkslategray;
     text-decoration: none;
@@ -203,11 +203,9 @@ figcaption {
 .container a:hover {
     border-color: orange;
     color: darkslategray;
-
 }
 
-@media screen and (max-width: 768px) {
-    
+@media screen and (max-width: 768px) {  
     nav,
     nav ul,
     #about-me,
@@ -255,7 +253,11 @@ figcaption {
         padding: 50px;
     }
     figcaption {
-/* could not figure out how to reposition the figcaption in mobile mode */
+        top: 20px;
+        right: 50px;
+    }
+    #project-1 figcaption {
+        top: 20px;
     }
     #work aside {
         text-align: left;
